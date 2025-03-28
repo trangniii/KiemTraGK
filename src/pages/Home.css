@@ -1,0 +1,145 @@
+/* Biến màu sắc */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --tertiary-color: #9b59b6;
+    --text-color: #2c3e50;
+    --bg-color: #f9f9f9;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Layout chính */
+  .app-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Cho phép scroll nội dung */
+  }
+  
+  .app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .app-subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+  }
+  
+  
+  .time-display-container {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .action-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0.5rem;
+    color: white;
+  }
+  
+  .time-button {
+    background-color: var(--primary-color);
+  }
+  
+  .time-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .time-result {
+    
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .time-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: var(--text-color);
+  }
+  
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .share-button {
+    background-color: var(--secondary-color);
+  }
+  
+  .share-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .screenshot-button {
+    background-color: var(--tertiary-color);
+  }
+  
+  .screenshot-button:hover {
+    background-color: #8e44ad;
+  }
+  
+  
+  .screenshot-preview {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .screenshot-image {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin-top: -50px;
+  
+  }
+  
+  .app-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
